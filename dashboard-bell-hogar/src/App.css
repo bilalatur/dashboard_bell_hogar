@@ -1,38 +1,183 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+:root{
+  --gris-oscuro: #637a7f;
+  --naranja: #aa622d;
+  --beige: #e4eabe;
+  --marrón-oscuro: #8c827a ;
+  --gris-oscuro: #3f5952;
+  --azul-oscuro: #306670;
+  --marrón-claro: #c49e76;
+  --verde-musgo: #729486;
+  --verde-clarito: #b5c4b9;
+  --violeta-claro: #d2c8bf;
+  --amarillo: #ffd31d;
+  --gris-footer: #3f3f44;
+  --base-font-family:"Nunito Sans",sans-serif;
+}
+*{
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+ul li{
+  list-style: none;
+  margin: 0;
+}
+ul li a{
+  text-decoration: none;
+  color: var(--gris-footer);
+}
+.logo{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo img{
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* revisar */
+.card{
+  border: none;
+}
+.card-deck{
+  margin-bottom: 20px;
+  border: none;
+}
+.card-img-overlay{
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-img-overlay h5{
+  background-color: var(--gris-footer);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.card-img-overlay a{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* FOOTER */
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 30px;
+  padding-top: 30px;
+  background-color: var(--gris-footer);
+  color: black;
+}
+.div.row.footer{
+  padding-top: 30px;
+}
+.footer-titulo{
+  font-weight: 1000;
+  color: white;
+}
+.contacto{
+  padding: 5px;
+}
+.contacto-lista{
+  padding: 0px;
+}
+.suscribite{
+  padding: 5px;
+}
+.suscribite input{
+  border: 1px solid black;
+}
+.suscribite button{
+  border:none;
+  background-color: var(--amarillo);
+  margin-top: 2%;
+}
+.preguntas{
+  padding: 5px;
+}
+.preguntas ul{
+  padding: 0;
+}
+.redes{
+  padding: 5px;
+}
+.redes-lista{
+  padding: 0px;
+}
+.redes-icono{
+  font-size: 35px;
+}
+.fa-instagram{
+  color:#C13584;
+}
+.fa-whatsapp{
+  color: #25d366;
+}
+.fa-facebook{
+  color: #3b5998;
+}
+.contacto li{
+  color:white
+}
+.suscribite li{
+  color:white
+}
+.preguntas li{
+  color:white
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+ #Contenedor{
+	width: 300px;
+	margin: 5px auto;
+	background-color: transparent;
+  border: 1px solid var(--gris-oscuro);
+  box-shadow: 2px 2px 10px #666;        /* Sombra normal */
+  box-shadow: 5px -5px 0 2px #444;      /* Sombra superior sin desenfoque */
+  box-shadow: 5px 5px 25px beige inset;
+	height: 320px;
+	border-radius:8px;
+	padding: 0px 9px 0px 9px;
+}
+
+.btn-color{
+  margin: 1% auto;
+  background-color: var(--amarillo);
+  font-size: 15px;
+}
+
+
+/* Media para Mobile  */
+
+@media (max-width: 499px){
+  
+  .end-cart-btn{
+    margin-top: 2%;
+    background-color: var(--amarillo);
+    color: black;
+    border-color: var(--amarillo);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+
+/* Media para desktop */
+@media (min-width: 500px) {
+  .logo img{
+    width: 33%;
+    align-self: center;
   }
+  
+
+
+
+
+  
+  .footer{
+    padding-top: 2%;
+  }
+
 }
