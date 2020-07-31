@@ -1,7 +1,7 @@
-import React from "react";
-
-function Header(){
-    return(
+import React, {Component} from "react";
+class Header extends Component{
+    render(){
+        return(
         <div className="container col-12">
             <div className="row col-12">
                 <div className="head col-12">
@@ -12,5 +12,5 @@ function Header(){
         
         );
     }
-    
+}
 export default Header;

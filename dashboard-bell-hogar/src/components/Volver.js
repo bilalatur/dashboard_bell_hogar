@@ -1,7 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 
-function Volver(){
-    return(
+class Volver extends Component{
+    render (){
+        return(
         <div className="container col-12">
             <div className="row col-12">
                 <div className="volver col-12">
@@ -12,5 +13,6 @@ function Volver(){
         
         );
     }
+}
     
     export default Volver;
