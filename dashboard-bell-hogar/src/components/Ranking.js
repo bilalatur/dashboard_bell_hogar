@@ -1,26 +1,56 @@
 import React, {Component} from "react";
 
 class Ranking extends Component{
-    render(){
-        return(
-            <div className="div-ranking container col-5">
-                <div className="row">
-                    <div className="data-container">
-                        <h4 className="ranking-title col-12"> 10 más vendidos </h4>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                        <p className="data-ranking col-6">Product X</p>
-                    </div>
-                </div>
-            </div>
-            );
+    constructor(props){
+        super(props);
+        this.state={
+            ranking:[],
+            error:null,
+            isLoaded: false,
         }
     }
-    export default Ranking;
+
+    apiCall(url, consecuencia){
+        fetch(url)
+        .then(response => response.json())
+        .then(informacion => consecuencia(informacion))
+        .catch(error => this.setState({error:error}))
+    }
+
+    componentDidMount(){
+        console.log("montaje ok");
+        this.apiCall('http://localhost:3001/api/products/'+ this.props.endpoint, this.listarranking)
+    }
+
+    listarranking = (informacion)=>{
+        console.log("respuesta de la api " + informacion.data)
+        this.setState({
+            ranking:informacion.data,
+            isLoaded: true,
+        })
+
+    }
+
+    render(){
+        if(this.state.error){
+            return <div>Error: {this.state.error.message} </div>;
+        }else if(!this.state.isLoaded){
+            return <div>Cargando...</div>;
+        }else{
+            return(
+                <div className="div-ranking col-md-6">
+                    <div className="row col-12">
+                        <div className="container ">
+                            <h4 className="ranking-title col-12"> 5 productos con {this.props.titulo}</h4>
+                            <ul className="lista-ranking">
+                                { this.state.ranking.map((item , i) => <li key = {i}> {item.name + i} {this.props.detalle} {item.stock + i} </li>) }
+                            </ul>
+                         </div>
+                     </div>
+                </div>
+
+                );
+            }
+        }
+    }
+export default Ranking;
