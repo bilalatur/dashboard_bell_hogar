@@ -38,15 +38,15 @@ class Ranking extends Component{
             return <div>Cargando...</div>;
         }else{
             return(
-                <div className="div-ranking col-md-6">
-                    <div className="row col-12">
+                <div className="div-ranking row col-5">
+                   
                         <div className="container ">
-                            <h4 className="ranking-title col-12"> 5 productos con {this.props.titulo}</h4>
+                            <h4 className="col-12"> 5 productos con {this.props.titulo}</h4>
                             <ul className="lista-ranking">
                                 { this.state.ranking.map((item , i) => <li key = {i}> {item.name + i} {this.props.detalle} {item.stock + i} </li>) }
                             </ul>
                          </div>
-                     </div>
+                    
                 </div>
 
                 );

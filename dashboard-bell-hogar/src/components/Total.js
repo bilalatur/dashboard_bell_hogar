@@ -37,11 +37,11 @@ class Total extends Component{
             return <div>Cargando...</div>;
         }else{
             return(
-                <div className="col-4">
-                    <div className="row ">
-                        <div className="total ">
-                            <h5 className="font-weight-bold "> Total de {this.props.titulo}</h5>
-                            <h6 className="font-weight-bold ">{this.state.total}</h6>
+                <div className="col-3 caja-total">
+                    <div className="row">
+                        <div className="col-12">
+                            <h5> Total de {this.props.titulo}</h5>
+                            <h6 className="count">{this.state.total}</h6>
                             <i className={this.props.icono}> </i>
                         </div>
                     </div>

@@ -14,52 +14,69 @@
   --gris-footer: #3f3f44;
   --base-font-family:"Nunito Sans",sans-serif;
 }
-*{
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-}
 body {
+  
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  border: var(--gris-oscuro);
 }
-
-.container{
-  display: flex;
-  flex-wrap: wrap;
+a{
+  color: var(--verde-musgo);
 }
-.container-header{
-  display: flex;
-  flex-wrap: wrap;
+.contenedor{
+  justify-content: space-around;
+  padding:0px
 }
 .complementos{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: space-around;
+  padding:15px
 }
-.title-p{
-  margin-bottom: 1%;
-}
-.ranking-title{
-  margin-bottom: 3%;
+.caja-total{
+  border: solid #3f3f44 3px;
+  border-radius: 5px;
+  margin: 10px;
+  padding-bottom: 4px;
 }
 .data-container{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  border: 1px black solid;
+  border: 3px #3f3f44 solid;
 }
+/* .title-p{
+  margin-bottom: 1%;
+} */
+
+h4 .data-ranking { 
+  text-align: center;
+  color: var(--gris-footer);
+  margin-bottom: 3%;
+}
+
+.lista-ranking{
+  color: var(--verde-musgo);
+}
+
 .ranking{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 2%;
 }
 .div-ranking{
-  margin: 1%;
-  border: solid grey 0.25rem;
-  margin: 10px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid #3f3f44 3px;
+  border-radius: 5px;
+  justify-content: space-around;
+  margin: 5px;
+ 
 }
 .head{
   display: flex;
@@ -74,5 +91,16 @@ body {
 }
 .total div{
   margin: 10px;
-  border:  #808080 0.30rem;
+  border: #3f3f44 3px;
+}
+.count{
+  text-align: center;
+  vertical-align: bottom;
+}
+.row{
+  margin-left: 0em;
+  margin-right: 1em;
+}
+td{
+  color: var(--verde-musgo);
 }

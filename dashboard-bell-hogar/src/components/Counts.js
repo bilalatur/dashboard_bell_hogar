@@ -6,23 +6,23 @@ function Counts(){
         {
             titulo: 'Productos',
             endpoint: 'products/count',
-            icono: 'fas fa-clipboard-list fa-2x text-gray-200'
+            icono: 'fas fa-chair fa-2x text-gray-200'
         },
         {
             titulo: 'Usuarios',
             endpoint: 'users/count',
-            icono: 'fas fa-dollar-sign fa-2x text-gray-200'
+            icono: 'fas fa-user-circle fa-2x text-gray-200'
         },
         {
             titulo: 'Categorias',
             endpoint: 'products/category',
-            icono: 'fas fa-user-check fa-2x text-gray-200'
+            icono: 'fas fa-list-alt fa-2x text-gray-200'
         }
     ];
     return(
         <div className="complementos">
              {totales.map((total, i) =>
-                <Total
+                <Total className="col-3"
                     key={i}
                     titulo={total.titulo}
                     endpoint={total.endpoint}

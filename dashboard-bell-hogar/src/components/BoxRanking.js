@@ -18,7 +18,7 @@ function BoxRanking (){
             
         },
         {
-            titulo: 'Mas Vendidos',
+            titulo: 'Mas Ventas',
             endpoint: 'mas-stock',
             detalle: 'Unidades vendidas:'
             
@@ -27,17 +27,17 @@ function BoxRanking (){
 
 
     return(
-        <div className="container ranking col-12">
-             <div className="complementos row ">
+        <div className="container complementos">
+             <div className="row ">
                 {propiedades.map((propiedad, i) =>
-                <Ranking className="data-ranking col-6"
+                <Ranking className="data-ranking"
                     key={i}
                     titulo={propiedad.titulo}
                     endpoint={propiedad.endpoint}
                     detalle={propiedad.detalle}
                 />)
                 }
-                <Categoria className="data-ranking col-6"/> 
+                <Categoria className="data-ranking" /> 
             </div>
             
         </div>

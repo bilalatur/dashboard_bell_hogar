@@ -45,17 +45,17 @@ class RankingCategoria extends Component{
             return <div>Cargando...</div>;
         }else{
             return(
-                <div className="">
-                        <div className="col-8">
-                            <ul>
+                <div className="data-ranking">
+                        <div className="col-12">
+                            <ul className="lista-ranking">
                                 { this.productosPorCategoria().slice(0,5).map((item , i) => <li key = {i}> {item.name}</li>) }
                             </ul>
                         </div>
-                        <div className="col-8">
-                            <h4 className="categoria-title col-12"> Total productos: </h4>
-                            <p>
+                        <div className="row col-12">
+                            <h4 className="col-8"> Total productos: </h4>
+                            <h6 className="count col-4">
                                 { this.productosPorCategoria().length }
-                            </p>
+                            </h6>
                         </div>
                 </div>
                 );

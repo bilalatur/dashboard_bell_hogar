@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class ListaProductos extends Component{
+class UltimoProducto extends Component{
     constructor(){
         super();
         this.state={
-            productos:[],
+            producto:null,
             error:null,
             isLoaded: false,
         }
@@ -19,13 +19,13 @@ class ListaProductos extends Component{
 
     componentDidMount(){
         console.log("montaje ok");
-        this.apiCall('http://localhost:3001/api/products', this.listarTotal)
+        this.apiCall('http://localhost:3001/api/products/last-product', this.listar)
     }
 
-    listarTotal = (informacion)=>{
+    listar = (informacion)=>{
         console.log("respuesta de la api " + informacion.data)
         this.setState({
-            productos:informacion.data,
+            producto:informacion.data,
             isLoaded: true,
         })
     }
@@ -44,24 +44,26 @@ class ListaProductos extends Component{
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Categoría</th>
+                            <th scope="col">Subcategoría</th>
                             <th scope="col">Marca</th>
+                            <th scope="col">Descripción</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Stock</th>
-                            <th scope="col">Url detalle</th>
+                            <th scope="col">Imagen</th>
                             </tr>
                         </thead>
                         <tbody>
-                        {this.state.productos.map((producto , i) => (
-                            <tr key = {i}>
-                                <th scope="row">{producto.id}</th>
-                                <td>{producto.name}</td>
-                                <td>{producto.category}</td>
-                                <td>{producto.brand}</td>
-                                <td>${producto.price}</td>
-                                <td>{producto.stock}</td>
-                                <td>{"http://localhost:3001/api/products/" + producto.id}</td>
+                            <tr>
+                                <th scope="row">{this.state.producto.id}</th>
+                                <td>{this.state.producto.name}</td>
+                                <td>{this.state.producto.category}</td>
+                                <td>{this.state.producto.subcategory}</td>
+                                <td>{this.state.producto.brand}</td>
+                                <td>{this.state.producto.description}</td>
+                                <td>${this.state.producto.price}</td>
+                                <td>{this.state.producto.stock}</td>
+                                <td>{this.state.producto.image1}</td>
                             </tr>
-                        ))}
                         </tbody>
                     </table>
                 </div>
@@ -70,4 +72,4 @@ class ListaProductos extends Component{
     }
 }
 
-export default ListaProductos;
+export default UltimoProducto;
