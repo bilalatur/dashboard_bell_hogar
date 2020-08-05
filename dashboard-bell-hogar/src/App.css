@@ -23,7 +23,11 @@ body {
   border: var(--gris-oscuro);
 }
 a{
-  color: var(--verde-musgo);
+  color: var(--gris-oscuro);
+}
+a:hover{
+  color: var(--gris-oscuro);
+  text-decoration: none;
 }
 .contenedor{
   justify-content: space-around;
@@ -34,7 +38,8 @@ a{
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
-  padding:15px
+  padding:0px;
+  margin: 0px
 }
 .caja-total{
   border: solid #3f3f44 3px;
@@ -42,6 +47,7 @@ a{
   margin: 10px;
   padding-bottom: 4px;
 }
+
 .data-container{
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +57,9 @@ a{
 /* .title-p{
   margin-bottom: 1%;
 } */
+h4{
+  color: var(--gris-footer);
+}
 
 h4 .data-ranking { 
   text-align: center;
@@ -59,7 +68,7 @@ h4 .data-ranking {
 }
 
 .lista-ranking{
-  color: var(--verde-musgo);
+  color: var(--gris-oscuro);
 }
 
 .ranking{
@@ -99,8 +108,14 @@ h4 .data-ranking {
 }
 .row{
   margin-left: 0em;
-  margin-right: 1em;
+  margin-right: 0em;
 }
 td{
-  color: var(--verde-musgo);
+  color: var(--gris-oscuro);
+}
+th{
+  color: var(--gris-footer);
+}
+li{
+  text-align: left;
 }

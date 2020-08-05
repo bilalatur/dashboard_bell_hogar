@@ -54,7 +54,7 @@ class Categoria extends Component{
             return(
             <div className="div-ranking row col-5">
                 <h4 className="col-12"> Destacados por categoría </h4>
-                <div>
+                <div className="data-ranking col-12">
                     <select onChange= {(event) => this.seleccionCategoria(event)}>Seleccione la categoria:
                     <option> Select category </option>
                     { this.state.categoria.map((item , i) => <option key = {i} > {item.category} </option>) }

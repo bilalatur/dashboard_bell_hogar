@@ -40,8 +40,8 @@ class Total extends Component{
                 <div className="col-3 caja-total">
                     <div className="row">
                         <div className="col-12">
-                            <h5> Total de {this.props.titulo}</h5>
-                            <h6 className="count">{this.state.total}</h6>
+                            <h4> Total de {this.props.titulo}</h4>
+                            <h4 className="count">{this.state.total}</h4>
                             <i className={this.props.icono}> </i>
                         </div>
                     </div>
