@@ -48,7 +48,7 @@ class RankingCategoria extends Component{
                 <div className="data-ranking">
                         <div className="col-12">
                             <ul className="lista-ranking">
-                                { this.productosPorCategoria().slice(0,5).map((item , i) => <li key = {i}> {item.name}</li>) }
+                                { this.productosPorCategoria().map((item , i) => <li key = {i}> {item.name}</li>) }
                             </ul>
                         </div>
                         <div className="row col-12">

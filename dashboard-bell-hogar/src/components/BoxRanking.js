@@ -20,7 +20,7 @@ function BoxRanking (){
         {
             titulo: 'Mas Ventas',
             endpoint: 'mas-stock',
-            detalle: ''
+            detalle: '--'
             
         }
     ];

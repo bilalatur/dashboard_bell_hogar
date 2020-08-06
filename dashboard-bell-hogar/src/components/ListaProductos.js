@@ -47,19 +47,17 @@ class ListaProductos extends Component{
                             <th scope="col">Marca</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Stock</th>
-                            <th scope="col">Url detalle</th>
                             </tr>
                         </thead>
                         <tbody>
                         {this.state.productos.map((producto , i) => (
                             <tr key = {i}>
                                 <th scope="row">{producto.id}</th>
-                                <td>{producto.name}</td>
+                                <td><a href={"http://localhost:3000/products/"+producto.id} > {producto.name}</a></td>
                                 <td>{producto.category}</td>
                                 <td>{producto.brand}</td>
                                 <td>${producto.price}</td>
                                 <td>{producto.stock}</td>
-                                <td>{"http://localhost:3001/api/products/" + producto.id}</td>
                             </tr>
                         ))}
                         </tbody>

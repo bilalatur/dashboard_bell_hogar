@@ -49,20 +49,19 @@ class UltimoProducto extends Component{
                             <th scope="col">Descripción</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Stock</th>
-                            <th scope="col">Imagen</th>
+                            
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">{this.state.producto.id}</th>
-                                <td>{this.state.producto.name}</td>
+                                <td><a href={"http://localhost:3000/products/"+this.state.producto.id} >{this.state.producto.name}</a></td>
                                 <td>{this.state.producto.category}</td>
                                 <td>{this.state.producto.subcategory}</td>
                                 <td>{this.state.producto.brand}</td>
                                 <td>{this.state.producto.description}</td>
                                 <td>${this.state.producto.price}</td>
                                 <td>{this.state.producto.stock}</td>
-                                <td>{this.state.producto.image1}</td>
                             </tr>
                         </tbody>
                     </table>

@@ -43,7 +43,7 @@ class Ranking extends Component{
                         <div className="container ">
                             <h4 className="col-12"> 5 productos con {this.props.titulo}</h4>
                             <ul className="lista-ranking">
-                                { this.state.ranking.map((item , i) => <li key = {i}> {item.name + i} {this.props.detalle} {item.stock + i} </li>) }
+                                { this.state.ranking.map((item , i) => <li key = {i}> {item.name} {this.props.detalle} {item.stock} </li>) }
                             </ul>
                          </div>
                     

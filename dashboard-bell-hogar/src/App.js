@@ -8,7 +8,7 @@ import Contenedor from './components/Contenedor';
 
 function App() {
   return (
-    <div className="body">
+    <div className="container">
       <div className="container-head col-12">
         <Header className="col-12"/>
       </div>
