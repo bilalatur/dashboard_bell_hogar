@@ -1,12 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 
-class Volver extends Component{
-    render (){
+function Volver (){
         return(
             <div className="container row volver col-12">
-                <button className="volver-btn"><a href="http://localhost:3000/users/profile" >Perfil de Administrador </a> </button>
+                <button className="volver-btn"><a href="http://localhost:3000/products/adm/prod" >Panel de Administración </a> </button>
             </div>
         );
-    }
 }
 export default Volver;
